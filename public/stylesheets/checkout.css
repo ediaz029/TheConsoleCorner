@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Honk', cursive;
+  padding: 30px;
+  color: #0c836f;
+  font-size: 60px;
+  background: #ffffff; /* Fallback color */
+}
+
+header {
+  text-align: center;
+  padding: 20px 10;
+  background-color: #aeddd6;
+  margin-bottom: 20px;
+}
+h1 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Russo One', sans-serif;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0; /* Remove padding to align items properly */
+    margin: 0; /* Reset margin to align items properly */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items vertically */
+    background-color: #6cb5aa;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  font-family: 'Russo One', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+nav a:hover {
+  background-color: #0c836f;
+  border-radius: 6px;
+}
+
+
+p {
+color: #0c836f;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Russo One', sans-serif;
+    width: calc(33.333% - 20px);
+    border: 1px solid #dddddd00;
+    padding: 20px;
+    border-radius: .5px;
+    text-align: center;
+    font-size: medium;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #6cb5aa;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: larger;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0c836f;
+  }
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #aeddd6;
+    margin-top: 20px;
+  }
+  /* Add some margin and padding reset */
+  

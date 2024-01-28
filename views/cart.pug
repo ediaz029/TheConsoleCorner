@@ -2,24 +2,25 @@ doctype html
 html
   head
     meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title The Console Corner
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='https://kit.fontawesome.com/a076d05399.js', crossorigin='anonymous')
+    link(rel='stylesheet' href='/stylesheets/cart.css')
+    script(src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous')
   body
     header
       h1 The Console Corner
       nav
         ul
           li
-            a(href='/') Home
+            a(href='/') HOME
           li
-            a(href='/featured') Featured
+            a(href='/featured') FEATURED
           li.cart
             a(href='/cart')
               i.fas.fa-shopping-cart
-              |  Cart
+              |  CART
     .app-container
+    .cart-container 
       if cartItems.length > 0
         each item in cartItems
           .cart-item
@@ -27,18 +28,18 @@ html
             .item-details
               h4.item-name= item.name
               p.item-description= item.description
-              p.item-price Price: $#{item.price}
+              p.item-price $#{item.price}
               .item-quantity
-                label(for=`quantity-${item.id}`) Quantity:
+                label(for=`quantity-${item.id}`) Quantity
                 input(type='number' value=item.quantity min='1' id=`quantity-${item.id}`)
-              button.remove-item(onclick=`removeFromCart(${item.id})`) Remove
+                button.remove-item(onclick=`removeFromCart(${item.id})`) REMOVE
         .cart-summary
-          h3 Total: $999.98
+          h3 $999.98
           a(href='/checkout')
-            button.checkout-button Checkout
+            button.checkout-button CHECKOUT
 
       else
-        h3 No items in cart yet.
+        h3 CART is Empty.
     footer
       p &copy; 2024 The Console Corner
     script(src='/scripts/cart.js')

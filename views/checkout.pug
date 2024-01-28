@@ -4,7 +4,7 @@ html
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title The Console Corner
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/checkout.css')
     script(src='https://kit.fontawesome.com/a076d05399.js', crossorigin='anonymous')
   body
     header
@@ -20,7 +20,22 @@ html
               i.fas.fa-shopping-cart
               |  Cart
     .app-container
-      h1 checkout stuff
+    .cart-container 
+      if cartItems.length > 0
+        each item in cartItems
+          .cart-item
+            .item-details
+              h4.item-name= item.name
+              p.item-description= item.description
+              p.item-price $#{item.price}
+              .item-quantity
+                label(for=`quantity-${item.id}`) #{quantity}
+                
+        .cart-summary
+          h3 $999.98
+          a(href='/checkout')
+            button.checkout-button PAY
+
     .checkout-container 
     //paypal api here
     footer
