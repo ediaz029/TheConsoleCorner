@@ -1,0 +1,34 @@
+doctype html
+head
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width, initial-scale=1.0')
+title The Console Corner
+link(rel='stylesheet', href='/stylesheets/style.css')
+script(src='https://kit.fontawesome.com/a076d05399.js', crossorigin='anonymous')
+// Font Awesome for Cart Icon
+header
+h1 The Console Corner
+nav
+ul
+li
+a(href='#') Home
+li
+a(href='#') Featured
+li.cart
+a(href='#')
+i.fas.fa-shopping-cart
+|  Cart
+.app-container
+// Nested container for e-commerce items
+.products-container
+// Sample item
+.product-item
+img(src='path/to/image.jpg', alt='Product Image')
+h3 Product Name
+p Product Description
+p Price: $xx.xx
+button Add to Cart
+// Add more product items here
+footer
+p &copy; 2024 My E-commerce Site
+script(src='scripts.js')
