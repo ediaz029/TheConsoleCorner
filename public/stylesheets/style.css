@@ -1,4 +1,7 @@
 /* Add some margin and padding reset */
+/* Place in your CSS file at the top of the document */
+
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +9,30 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #CF91BC; /* Fallback color */
-  background: linear-gradient(to top, #CF91BC 0%, #2754CF 100%); /* Gradient background */
+  font-family: 'Honk', cursive;
+  padding: 30px;
+  color: #0c836f;
+  font-size: x-large;
+  background: #ffffff; /* Fallback color */
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
-  background-color: #ffffff;
+  padding: 20px 10;
+  background-color: #aeddd6;
   margin-bottom: 20px;
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 nav ul {
   list-style: none;
-  padding: 0;
+  padding: 10;
   display: flex;
   justify-content: center;
+  background-color: #6cb5aa;
   align-items: center;
 }
 
@@ -37,8 +42,8 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
+  color: #086153;
+  font-size: 30px;
 }
 
 nav .cart {
@@ -51,12 +56,11 @@ nav .cart i {
 }
 
 .app-container {
-  width: 80%;
-  max-width: 1200px;
+  width: 90%;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .products-container {
@@ -67,11 +71,15 @@ nav .cart i {
 }
 
 .product-item {
+  font-family: 'Verdana', cursive;
   width: calc(33.333% - 20px);
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd00;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: .5px;
   text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow */
 }
 
 .product-item img {
@@ -97,109 +105,7 @@ button:hover {
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #ffffff;
+  background-color: #aeddd6;
   margin-top: 20px;
 }
 /* Add some margin and padding reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #CF91BC; /* Fallback color */
-  background: linear-gradient(to top, #CF91BC 0%, #2754CF 100%); /* Gradient background */
-}
-
-header {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #ffffff;
-  margin-bottom: 20px;
-}
-
-h1 {
-  margin-bottom: 20px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav li {
-  margin: 0 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-}
-
-nav .cart {
-  display: flex;
-  align-items: center;
-}
-
-nav .cart i {
-  margin-right: 5px;
-}
-
-.app-container {
-  width: 80%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.products-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.product-item {
-  width: calc(33.333% - 20px);
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-}
-
-.product-item img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-button {
-  padding: 10px 15px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #ffffff;
-  margin-top: 20px;
-}
-
