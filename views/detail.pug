@@ -8,19 +8,27 @@ html
     script(src='https://kit.fontawesome.com/a076d05399.js', crossorigin='anonymous')
   body
     header
-      h1 The Console Corner 
+      h1 The Console Corner
       nav
         ul
           li
-            a(href='/index') Home
+            a(href='#') Home
           li
-            a(href='#') Featured
+            a(href='/featured') Featured
           li.cart
             a(href='/cart')
               i.fas.fa-shopping-cart
               |  Cart
     .app-container
-    h3 No FEATURED items.
+      .products-container
+        .product-item
+          img(src='ConsoleImg/ps5.png', alt='PS5')
+          h3 Sony - Play Station 5 Slim Console - White
+          p $499.99
+         
+    
+          
+        // ... More .product-item blocks as needed ...
     footer
       p &copy; 2024 The Console Corner
     script(src='scripts.js')

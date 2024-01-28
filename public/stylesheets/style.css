@@ -1,7 +1,5 @@
-/* Add some margin and padding reset */
-/* Place in your CSS file at the top of the document */
-
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -41,9 +39,14 @@ nav li {
 }
 
 nav a {
+  font-family: 'Russo One', sans-serif;
   text-decoration: none;
   color: #086153;
-  font-size: 30px;
+  font-size: 25px;
+}
+
+nav a:hover {
+  background-color: #0c836f;
 }
 
 nav .cart {
@@ -53,6 +56,10 @@ nav .cart {
 
 nav .cart i {
   margin-right: 5px;
+}
+
+p {
+color: #0c836f;
 }
 
 .app-container {
@@ -71,12 +78,16 @@ nav .cart i {
 }
 
 .product-item {
-  font-family: 'Verdana', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Russo One', sans-serif;
   width: calc(33.333% - 20px);
   border: 1px solid #dddddd00;
   padding: 20px;
   border-radius: .5px;
   text-align: center;
+  font-size: medium;
   color: #000000;
   background-color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Example shadow */
@@ -90,7 +101,7 @@ nav .cart i {
 
 button {
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #6cb5aa;
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -99,7 +110,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0c836f;
 }
 
 footer {
