@@ -22,6 +22,19 @@ app.use(express.static('public'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// Define the /cart route
+app.get('/cart', (req, res) => {
+  res.render('cart');
+});
+
+app.get('/index', (req, res) => {
+  res.render('index'); 
+});
+
+app.get('/featured', (req, res) => {
+  res.render('featured'); 
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
