@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title The Console Corner
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://kit.fontawesome.com/a076d05399.js', crossorigin='anonymous')
+  body
+    header
+      h1 The Console Corner
+      nav
+        ul
+          li
+            a(href='/') Home
+          li
+            a(href='/featured') Featured
+          li.cart
+            a(href='/cart')
+              i.fas.fa-shopping-cart
+              |  Cart
+    .app-container
+      h1 checkout stuff
+    .checkout-container 
+    //paypal api here
+    footer
+      p &copy; 2024 The Console Corner
+    script(src='/scripts/cart.js')

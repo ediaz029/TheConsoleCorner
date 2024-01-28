@@ -12,15 +12,33 @@ html
       nav
         ul
           li
-            a(href='/index') Home
+            a(href='/') Home
           li
             a(href='/featured') Featured
           li.cart
-            a(href='#')
+            a(href='/cart')
               i.fas.fa-shopping-cart
               |  Cart
     .app-container
-    h3 CART is empty.
+      if cartItems.length > 0
+        each item in cartItems
+          .cart-item
+            img(src=item.image alt=item.name)
+            .item-details
+              h4.item-name= item.name
+              p.item-description= item.description
+              p.item-price Price: $#{item.price}
+              .item-quantity
+                label(for=`quantity-${item.id}`) Quantity:
+                input(type='number' value=item.quantity min='1' id=`quantity-${item.id}`)
+              button.remove-item(onclick=`removeFromCart(${item.id})`) Remove
+        .cart-summary
+          h3 Total: $999.98
+          a(href='/checkout')
+            button.checkout-button Checkout
+
+      else
+        h3 No items in cart yet.
     footer
       p &copy; 2024 The Console Corner
-    script(src='scripts.js')
+    script(src='/scripts/cart.js')

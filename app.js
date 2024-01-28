@@ -3,9 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// hi
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+
 
 var app = express();
 
@@ -18,27 +18,46 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static('public'));
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// Define the /cart route
-app.get('/cart', (req, res) => {
-  res.render('cart');
-});
-
+// Define the /index route
 app.get('/index', (req, res) => {
   res.render('index'); 
 });
 
+// Define the /featured route
 app.get('/featured', (req, res) => {
   res.render('featured'); 
 });
 
+// Define the /cart route with hardcoded cart items data
+app.get('/cart', (req, res) => {
+  let cartItemsData = [
+    { id: 1, name: 'PlayStation 5', description: 'Sony - Play Station 5 Slim Console - White', price: 499.99, image: '/images/ps5.jpg' },
+    { id: 2, name: 'Xbox', description: 'Microsoft - Xbox Series X 1TB Console - Black', price: 499.99, image: '/images/series1.jpg' }
+    // ... more items
+  ];
+  res.render('cart', { cartItems: cartItemsData });
+});
+
+// Define the /checkout route
+app.get('/checkout', (req, res) => {
+  let cartItemsData = [
+    { id: 1, name: 'PlayStation 5', description: 'Sony - Play Station 5 Slim Console - White', price: 499.99, image: '/images/ps5.jpg' },
+    { id: 2, name: 'Xbox', description: 'Microsoft - Xbox Series X 1TB Console - Black', price: 499.99, image: '/images/series1.jpg' }
+    // ... more items
+  ];
+  res.render('checkout', { cartItems: cartItemsData });
+});
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  console.log(req.path)
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
